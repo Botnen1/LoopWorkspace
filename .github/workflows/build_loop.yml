@@ -14,12 +14,9 @@ jobs:
 
   build:
     needs: secrets
-    runs-on: macos-14 # GitHub-hosted macOS runner
+    runs-on: macos-latest
 
     steps:
-      - name: Select Xcode 16
-        run: "sudo xcode-select -switch /Applications/Xcode_16.0.app"
-
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
